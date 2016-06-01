@@ -32,7 +32,7 @@
 #include <Ticker.h>
 #include <EEPROM.h>
 #include <WiFiUdp.h>
-#include <credentials.h>
+//#include <credentials.h>
 
 #include "helpers.h"
 #include "global.h"
@@ -45,12 +45,20 @@
 #include "Page_Admin.h"
 #include "Page_Script.js.h"
 #include "Page_Style.css.h"
-#include "Page_NTPsettings.h"
+#include "Page_NTPSettings.h"
 #include "Page_Information.h"
 #include "Page_General.h"
 #include "Page_applSettings.h"
-#include "PAGE_NetworkConfiguration.h"
+#include "Page_NetworkConfiguration.h"
 #include "example.h"
+
+#ifndef ASP_SSID
+#define ASP_SSID "ESP8266"
+#endif
+
+#ifndef ASP_password
+#define ASP_password "secret"
+#endif
 
 extern "C" {
 #include "user_interface.h"
